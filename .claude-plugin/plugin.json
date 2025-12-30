@@ -1,0 +1,50 @@
+{
+  "name": "claude-auto-agents",
+  "version": "0.1.0",
+  "description": "Minimalist autonomous agent framework using Claude Code hooks. Full Ralph-loop automation with markdown-based work queue management.",
+  "author": "hanibalsk",
+  "repository": "https://github.com/hanibalsk/claude-auto-agents",
+  "license": "MIT",
+  "keywords": [
+    "autonomous",
+    "agents",
+    "hooks",
+    "automation",
+    "ralph-loop",
+    "workflow"
+  ],
+  "claudeCodeVersion": ">=1.0.0",
+  "components": {
+    "hooks": [
+      {
+        "event": "SessionStart",
+        "script": ".claude/hooks/session-start.sh"
+      },
+      {
+        "event": "Stop",
+        "script": ".claude/hooks/on-stop.sh"
+      }
+    ],
+    "agents": [
+      ".claude/agents/developer.md",
+      ".claude/agents/reviewer.md",
+      ".claude/agents/fixer.md",
+      ".claude/agents/orchestrator.md",
+      ".claude/agents/explorer.md",
+      ".claude/agents/pr-shepherd.md",
+      ".claude/agents/conflict-resolver.md"
+    ],
+    "commands": [
+      ".claude/commands/loop.md",
+      ".claude/commands/stop.md",
+      ".claude/commands/status.md",
+      ".claude/commands/queue.md",
+      ".claude/commands/spawn.md"
+    ],
+    "skills": [
+      ".claude/skills/develop.md",
+      ".claude/skills/review.md",
+      ".claude/skills/fix.md"
+    ]
+  }
+}
