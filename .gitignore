@@ -8,6 +8,12 @@ Thumbs.db
 *~
 .idea/
 .vscode/
+.cursor/
+
+# BMAD
+_bmad/
+
+.claude/commands/bmad/
 
 # Loop state (local only)
 .claude/hooks/lib/.loop-state
