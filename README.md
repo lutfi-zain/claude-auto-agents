@@ -24,7 +24,12 @@ A minimalist autonomous agent framework for Claude Code. Achieves continuous ite
 ```bash
 git clone https://github.com/hanibalsk/claude-auto-agents.git
 cd claude-auto-agents
+
+# Unix/Linux/macOS
 ./install.sh
+
+# Windows (PowerShell)
+.\install.ps1
 ```
 
 ## Usage
