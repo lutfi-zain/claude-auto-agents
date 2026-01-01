@@ -128,8 +128,8 @@ function Get-LoopStatus {
     }
 }
 
-# Command-line interface logic would go here if run directly
-if ($MyInvocation.MyCommand.Path -eq $PSCommandPath) {
+# Command-line interface logic
+if ($MyInvocation.InvocationName -ne '.') {
     switch ($args[0]) {
         "start" { Start-Loop -prompt $args[1] -max $args[2] }
         "stop" { Stop-Loop }

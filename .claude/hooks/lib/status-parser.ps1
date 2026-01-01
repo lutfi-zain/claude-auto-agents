@@ -91,7 +91,7 @@ function New-Status {
 }
 
 # Command-line interface
-if ($MyInvocation.MyCommand.Path -eq $PSCommandPath) {
+if ($MyInvocation.InvocationName -ne '.') {
     switch ($args[0]) {
         "parse" {
             if ($args[1]) {

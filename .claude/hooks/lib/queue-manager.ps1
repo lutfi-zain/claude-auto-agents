@@ -278,7 +278,7 @@ function Get-QueueSummary {
 }
 
 # Command-line interface
-if ($MyInvocation.MyCommand.Path -eq $PSCommandPath) {
+if ($MyInvocation.InvocationName -ne '.') {
     switch ($args[0]) {
         "list" { Get-QueueList }
         "count" { 
